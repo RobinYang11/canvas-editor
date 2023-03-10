@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="module">
+		import { foo, add, Editor, Rect, Layer } from '/dist/bundle.js';
+
+		var editor = new Editor({
+			width: 900,
+			height: 500,
+			root: document.body
+		})
+
+		var rect = new Rect({
+			x: 0,
+			y: 0,
+			width: 40,
+			height: 40,
+			fillStyle: "blue"
+		})
+
+		var rect1 = new Rect({
+			x: 100,
+			y: 100,
+			width: 40,
+			height: 40,
+			fillStyle: "yellow"
+		})
+
+		var layer = new Layer({
+			x: 0,
+			y: 0,
+		})
+
+		editor.add(layer).add(rect).add(rect1)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
